@@ -3,6 +3,15 @@
 
 from my_states import LockedState
 
+available_events= {
+    "LockedState": "pin_entered",
+    "UnlockedState": "device_locked, make_call, start_game, use_camera",
+    "CallingState": "hang_up, main_menu",
+    "GamingState": "device_locked, end_game, main_menu",
+    "CameraState": "device_locked, close_camera, main_menu",
+    "All": "pin_entered, device_locked, make_call, start_game, use_camera, main_menu, hang_up, end_game, close_camera"
+}
+
 class SimpleDevice(object):
     """ 
     A simple state machine that mimics the functionality of a device from a 
@@ -14,10 +23,13 @@ class SimpleDevice(object):
 
         # Start with a default state.
         self.state = LockedState()
-        self.list_events()
+        print("View available events with available_events() and all possible events with all_events()")
 
-    def list_events(self):
-        print("All events you can call: pin_entered, device_locked")
+    def all_events(self):
+        print("All events you can call: " + available_events["All"])
+
+    def available_events(self):
+        print("Events you can call: " + available_events[str(self.state)])
 
     def on_event(self, event):
         """
