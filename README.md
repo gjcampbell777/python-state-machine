@@ -2,7 +2,7 @@
 
 ### Python State Machine
 
-This is a simple state machine that I created by following a [tutorial](https://dev.to/karn/building-a-simple-state-machine-in-python) that I came across while going through Godot documentation.
+This is a state machine used to emulate a locked/unlocked device that I created by following a [tutorial](https://dev.to/karn/building-a-simple-state-machine-in-python) that I came across while going through Godot documentation.
 However after I finished the tutorial I expanded on it and will continue to expand upon it 
 since I find state machines fun and interesting to play around with.
 
