@@ -16,8 +16,12 @@ to import the functionality and then initalize a state machine you can mess arou
 
 ### Calls
 
-The calls you can make with `device` are `list_events()` and `on_event(event)`
+The calls you can make with `device` are `state()`, `all_events()`, `available_events()` and `on_event(event)`
 
-`list_events()` lists all the events you can use with `on_event()` and `on_event()` send that's event info to the state machine.
+`state()` displays the state you are currently in.
 
-The events that you can use with `on_event()` are `pin_entered` and `device_locked`
+`all_events()` displays all possible events you can call.
+
+`available_events()` displays all events that you can call with in your current state that won't be ignored.
+
+`on_event(event)` sends the event to your current state to be handled accordingly.
